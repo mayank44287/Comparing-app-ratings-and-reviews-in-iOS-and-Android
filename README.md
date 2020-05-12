@@ -1,7 +1,7 @@
 ## Comparing-app-ratings-and-reviews-in-iOS-and-Android
 
 
-##Introduction
+## Introduction
 
 We focused our attention on apps that were available on the Apple app store and Google Play store. Our objective was to compare apps on both the platforms, and bring out any differences in how users perceive these apps. App stores provide us with a wealth of user information on apps, primarily user reviews and ratings. This feedback is essential in understanding what the user wants and thinks; if this feedback is well utilised, it would be in favor of both the user and the app creator.
 Hence the comparison of the ratings and reviews of apps that are deployed in both the Apple App Store and the Google Play Market could be beneficial to understand similar or different trends.
@@ -23,7 +23,7 @@ Our analysis was based on the comparison of two factors :
 application.
     - Knowing the correlation between ratings and reviews can help understand whether a high rating also means a good review or not.
 
-##Data Collection
+## Data Collection
 
 Number of apps considered: 80
 - As the affordability of smartphones across the world is increasing exponentially, the app industry has absolutely exploded in the last 3 years.
@@ -47,7 +47,7 @@ Our study included different categories of apps separately in the study, namely:
 
 The choice of these categories was driven by our perceived importance of these categories. Within each category, we selected the top 10-12 most popular and free apps from each category that were deployed on both the Apple App Store and Google Play Store. Presumably, the policy for popularity for both apps is according to the number of downloads, and we used this to pick our initial sample of applications.
 
-##Scrapers
+## Scrapers
 
 - Initially researched on Kaggle, in order to get the datasets according to the requirements.
 -  As we proceeded, we decided not to continue with them, because we could not find a dataset with all the features we wanted. A dataset which had individual reviews and ratings
@@ -55,7 +55,7 @@ could not be found, so we decided to use custom web scraping tools.
 - We made minor changes to the API’s to suit our format and needs, and the links to the scraper can be found in our references. The Android scraper[2] we used was written in Python, while the iOS scraper[3] was based on node.js. in order to get the particular format required for our analysis.
 - The API’s fetched the data by the unique application Id, which we had to put manually.
 
-##Data Analysis
+## Data Analysis
 
 Initially, we analyzed the trend in ratings for the app data that we collected for both platforms. The results are as follows:
 
@@ -71,7 +71,7 @@ We then analyzed the ratings from the collected data, across seven categories on
 ![iOS apps by rating](viz/iOS_categoty.jpg)
 
 
-##Prediction Model
+## Prediction Model
 
 The relationship between user reviews and user ratings is an important motivating factor for this prediction task. Understanding this relationship can help us understand human behaviour and how their sentiments affect the ratings. The project uses a dataset discussed earlier, 7873 android reviews and 3901 ios reviews with which we train 2 different models. We use TruncatedSVD to reduce the dimensionality and extract key features. We can either address the problem using a Classification models like Logistic regression, SVM, Random Forest, XGboost and SGDClassifier, or we can address it using a regression models like Linear Regression, Lasso Regression, Random Forest Regressor and Support vector regression. The experiment will be using SVR from Scikit learn library. We will be reducing MSE. Once we have the models, we can use them to predict random common reviews and understand how the android users rate apps compared to IOS users with the same concerns.
 
@@ -89,7 +89,7 @@ Results
 We achieved accuracy of around 46.2% over 2k test reviews after  training over 6k training review. Similarly, we achieved around  42% accuracy for 1k test data after training over 3k training reviews. Ios has lesser accuracy compared to android since we didn't have enough data to work with. (IOS api restrictions). Results could have been a little better with more data. Still, the results we obtained are significant since most of the work related to predicting ratings use broader boundaries, and classify into 3 categories( Good, bad, neutral) compared to our work where we predict real numbers close to the rating. For example, a 4 star rating can have lots of positive words and the model might think of it as a 5 star rating. The main issues that affect our accuracy are these rating predictions which are close but they still show up as errors. 
 
 
-##Sentiment Analysis
+## Sentiment Analysis
 
 Sentiment Analysis, or Opinion Mining, is a sub-field of Natural Language Processing (NLP) that tries to identify and extract opinions within a given text. The aim of sentiment analysis is to gauge the attitude, sentiments, evaluations, attitudes and emotions of a speaker/writer based on the computational treatment of subjectivity in a text. Sentiment Analysis is also useful for practitioners and researchers, especially in fields like sociology, marketing, advertising, psychology, economics, and political science, which rely a lot on human-computer interaction data.
  
@@ -100,7 +100,7 @@ VADER has been found to be quite successful when dealing with social media texts
 It is fully open sourced under the MIT License. The developers of VADER have used Amazon’s Mechanical Turk to get most of their ratings.
 
 
-##Sentiment Analysis - Comparison for Android and iOS 
+## Sentiment Analysis - Comparison for Android and iOS 
 
 ![iOS apps by rating](viz/SentimentAndroid.png)
 
@@ -120,7 +120,7 @@ After classifying the reviews as positive, negative and neutral with Vader, we a
     - On the Android platform, 50% of the apps that have a neutral review have a rating of 1.0
     - On the iOS platform 50% of the apps that have a neutral review have a rating less than 2.0
 
-##Conclusion
+## Conclusion
 
 We would like to state a few results based on our analysis of reviews and ratings of apps on Apple app store and Google Play store. We tried to correlate the ratings for different categories on both the app stores. Further, we tried to correlate reviews and ratings for the apps as well.
 1.	The average rating of apps on iOS for six out of seven categories that we considered is higher than that on Android. We conclude that this is a result of the data that we used for the analysis. A possible explanation for this can be attributed to the different sample size of app reviews considered on both platforms. Note that this trend cannot be generalized to a comparison between all applications on Android and iOS.
