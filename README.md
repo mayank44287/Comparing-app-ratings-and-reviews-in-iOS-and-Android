@@ -3,6 +3,9 @@
 
 ## Introduction
 
+Taking care of the user sentiment, listening to your users and providing the best possible user experience possible is a key to having a high level of user engagement for your product. The users will not only install the application, but also access it and use it often. If you achieve this, it will mean that your app is well received, and it would potentially mean more success for the
+application.
+
 We focused our attention on apps that were available on the Apple app store and Google Play store. Our objective was to compare apps on both the platforms, and bring out any differences in how users perceive these apps. App stores provide us with a wealth of user information on apps, primarily user reviews and ratings. This feedback is essential in understanding what the user wants and thinks; if this feedback is well utilised, it would be in favor of both the user and the app creator.
 Hence the comparison of the ratings and reviews of apps that are deployed in both the Apple App Store and the Google Play Market could be beneficial to understand similar or different trends.
 Our analysis was based on the comparison of two factors :
